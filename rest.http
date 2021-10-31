@@ -1,0 +1,42 @@
+### home page 
+GET http://localhost:3000/
+
+### error page
+GET http://localhost:3000/abc
+
+### Register
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "email": "mrlocpro125@gmail.com",
+    "password": "abc123"
+}
+
+### Login
+POST http://localhost:3000/users/login
+Content-Type: application/json
+
+{
+    "email": "mrlocpro125@gmail.com",
+    "password": "abc123"
+}
+### Logout
+DELETE http://localhost:3000/users/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTdkMmVlZmExYmFlMTFkZjZmMWNmMjIiLCJpYXQiOjE2MzU2OTA0MjAsImV4cCI6MTY2NzI0ODAyMH0.PTGDuBivl2XECRSaedogFzr943WwZ-gbftIUoYkNk7Y"
+}
+### Refresh Token
+POST http://localhost:3000/users/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTdkMmVlZmExYmFlMTFkZjZmMWNmMjIiLCJpYXQiOjE2MzU2OTAzODAsImV4cCI6MTY2NzI0Nzk4MH0.NqvK3-2T8Q1NBfY4J2d0CpW5HXypPIZDsVTrO5vMRDU"
+}
+
+### Get List User
+GET http://localhost:3000/users/lists
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTdkMmVlZmExYmFlMTFkZjZmMWNmMjIiLCJpYXQiOjE2MzU2OTAzODAsImV4cCI6MTYzNTY5MDQ0MH0.tUIkLGSx0h8SfMhMu5OwxxBy89n6oY1ywDPb-nFL3X4
+
